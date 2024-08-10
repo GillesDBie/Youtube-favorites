@@ -7,3 +7,10 @@ export interface Video {
   description: string;
   rating: number;
 }
+
+export interface User {
+  _id?: ObjectId;
+  username: string;
+  password?: string;
+  role: "ADMIN" | "USER";
+}

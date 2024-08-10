@@ -1,0 +1,26 @@
+    <%- include('partials/header') %>
+    <body>
+    <main>
+        <h1>Video list</h1>
+        <table class="video-table">
+        <tr>
+            <th>Title</th>
+            <th>URL</th>
+            <th>description</th>
+            <th>rating</th>
+            <th>favorite?</th>
+        </tr>
+        <% for(video of videos) { %>
+        <tr class="videorow">
+            <td><%= video.title %></td>
+            <td><a href="<%= video.url %>"><%= video.url %></a></td>
+            <td><%= video.description %></td>
+            <td><%= video.rating %></td>
+            <td> <button class="favorite-button" onclick="toggleFavorite(this)">Favorite</button></td>
+        </tr>
+        <% }; %>
+        </table>
+    </main>
+    <script src="js/main.js"> </script>
+    </body>
+    <%- include('partials/footer') %>
